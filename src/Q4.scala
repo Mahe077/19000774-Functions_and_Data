@@ -7,7 +7,7 @@ object Q4 extends App{
   val find=(n:String,b:List[Account])=>b.filter(x=>x.nic.equals(n))
   val overdraft = (b:List[Account])=>b.filter(x => (x.balance < 0))
   val sum  = (b:List[Account])=> b.reduce((x,y) => new Account("",0,"",x.balance + y.balance)).balance
-  val cal =(x:Account)=>if(x.balance < 0) x.balance * 1  else x.balance*0.5
+  val cal =(x:Account)=>if(x.balance < 0) x.balance * 0.1  else x.balance*0.05
   val interest=(b:List[Account])=>b.map(x => x.deposit(cal(x)))
   
   var A1 = new Account("199830610254",302556985,"Mahesh",325.6)
